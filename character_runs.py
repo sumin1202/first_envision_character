@@ -23,14 +23,13 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_SPACE:
             jump_P.clip_draw(frame * 100, 0, 110, 110, 300, 300)
 
-
 while running:
     clear_canvas()
     BackG.draw(Back_Width // 2, Back_Height // 2)
     Slime_P.clip_draw(frame * 100, 0, 110, 110, 300, 300)
     frame = (frame + 1) % 4
     update_canvas()
-    delay(0.1)
+    delay(0.02)
     get_events()
 
 close_canvas()
