@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33b6ecff-af3e-4f3d-89fc-5273fb69a029" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/game_framework.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mygame.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start_state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/title_state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mygame.py" beforeDir="false" afterPath="$PROJECT_DIR$/mygame.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
