@@ -12,8 +12,8 @@ name = "MainState"
 Back_Width, Back_Height = 1400, 780
 character = None
 background = None
-attack_ch = None
 green_s = None
+blue_s = None
 block = None
 font = None
 
@@ -57,7 +57,7 @@ class Green_Slime:
     def __init__(self):
         global check, color
         self.frame = 0
-        self.cx, self.cy = 270, 190
+        self.cx, self.cy = 270, 185
         self.image = load_image('green.png')
         self.dir = 1
 
@@ -74,7 +74,7 @@ class Blue_Slime:
     def __init__(self):
         global check, color
         self.frame = 0
-        self.cx, self.cy = 270, 190
+        self.cx, self.cy = 270, 185
         self.image = load_image('blue.png')
         self.dir = 1
 
@@ -85,20 +85,6 @@ class Blue_Slime:
     def draw(self):
         global check, color
         self.image.clip_draw(self.frame * 100, 0, 105, 110, self.cx, self.cy)
-        delay(0.1)
-
-class Attack_Slime:
-    def __init__(self):
-        self.frame = 0
-        self.cx, self.cy = 270, 190
-        self.image = load_image('neum.png')
-        self.dir = 1
-
-    def update(self):
-        self.frame = (self.frame + 1) % 4
-
-    def draw(self):
-        self.image.draw(self.cx, self.cy)
         delay(0.1)
 
 class Block:
@@ -117,20 +103,20 @@ class Block:
         self.image.draw(self.bx2, self.by2)
 
 def enter():
-    global character, background, attack_ch, block, green_s
+    global character, background, attack_ch, block, green_s, blue_s
     character = Character()
-    attack_ch = Attack_Slime()
     background = Background()
+    blue_s = Blue_Slime()
     green_s = Green_Slime()
     block = Block()
     pass
 
 
 def exit():
-    global character, background, attack_ch, green_s
-    del(attack_ch)
+    global character, background, green_s, blue_s
     del(character)
     del(green_s)
+    del(blue_s)
     del(block)
     del(background)
     pass
@@ -145,22 +131,25 @@ def resume():
 
 
 def handle_events():
-    global check
+    global check, color
     events = get_events()
     for event in events:
         if event.type == SDL_QUIT:
             game_framework.quit()
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             game_framework.change_state(title_state)
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_SPACE:
-            check = 1
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_q:
+            if color == 2:
+                color = -1
+            color += 1
+
     pass
 
 def update():
     global check, color
     character.update()
-    attack_ch.update()
     green_s.update()
+    blue_s.update()
     block.update()
     background.update()
     pass
@@ -171,13 +160,15 @@ def draw():
     clear_canvas()
     background.draw()
     block.draw()
-    # jump Slime
-    if check == 1:
-        attack_ch.draw()
-        check = 1
-    elif check == 1:
-        green_s.draw()
-    else:
-        character.draw()
+    if check == 0:
+        # pink
+        if color == 0:
+            character.draw()
+        # green
+        elif color == 1:
+            green_s.draw()
+        # blue
+        elif color == 2:
+            blue_s.draw()
     update_canvas()
     pass
