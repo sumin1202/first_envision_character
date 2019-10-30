@@ -18,6 +18,7 @@ block = None
 font = None
 
 check = 0
+color = 0
 
 class Background:
     def __init__(self):
@@ -37,35 +38,52 @@ class Background:
 
 class Character:
     def __init__(self):
-        global check
+        global check, color
         self.frame = 0
         self.cx, self.cy = 270, 190
         self.image = load_image('run_Pink_Slime.png')
         self.dir = 1
 
     def update(self):
-        global check
+        global check, color
         self.frame = (self.frame + 1) % 4
 
     def draw(self):
-        global check
+        global check, color
         self.image.clip_draw(self.frame * 100, 0, 105, 110, self.cx, self.cy)
         delay(0.1)
 
 class Green_Slime:
     def __init__(self):
-        global check
+        global check, color
         self.frame = 0
         self.cx, self.cy = 270, 190
         self.image = load_image('green.png')
         self.dir = 1
 
     def update(self):
-        global check
+        global check, color
         self.frame = (self.frame + 1) % 4
 
     def draw(self):
-        global check
+        global check, color
+        self.image.clip_draw(self.frame * 100, 0, 105, 110, self.cx, self.cy)
+        delay(0.1)
+
+class Blue_Slime:
+    def __init__(self):
+        global check, color
+        self.frame = 0
+        self.cx, self.cy = 270, 190
+        self.image = load_image('blue.png')
+        self.dir = 1
+
+    def update(self):
+        global check, color
+        self.frame = (self.frame + 1) % 4
+
+    def draw(self):
+        global check, color
         self.image.clip_draw(self.frame * 100, 0, 105, 110, self.cx, self.cy)
         delay(0.1)
 
@@ -135,13 +153,11 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             game_framework.change_state(title_state)
         elif event.type == SDL_KEYDOWN and event.key == SDLK_SPACE:
-            check = 4
-        elif event.type == SDL_KEYDOWN and event.type == SDLK_q:
             check = 1
     pass
 
 def update():
-    global check
+    global check, color
     character.update()
     attack_ch.update()
     green_s.update()
@@ -151,14 +167,14 @@ def update():
 
 
 def draw():
-    global check
+    global check, color
     clear_canvas()
     background.draw()
     block.draw()
     # jump Slime
-    if check == 4:
+    if check == 1:
         attack_ch.draw()
-        check = 0
+        check = 1
     elif check == 1:
         green_s.draw()
     else:
