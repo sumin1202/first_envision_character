@@ -13,6 +13,7 @@ Back_Width, Back_Height = 1400, 780
 character = None
 background = None
 attack_ch = None
+green_s = None
 block = None
 font = None
 
@@ -40,6 +41,23 @@ class Character:
         self.frame = 0
         self.cx, self.cy = 270, 190
         self.image = load_image('run_Pink_Slime.png')
+        self.dir = 1
+
+    def update(self):
+        global check
+        self.frame = (self.frame + 1) % 4
+
+    def draw(self):
+        global check
+        self.image.clip_draw(self.frame * 100, 0, 105, 110, self.cx, self.cy)
+        delay(0.1)
+
+class Green_Slime:
+    def __init__(self):
+        global check
+        self.frame = 0
+        self.cx, self.cy = 270, 190
+        self.image = load_image('green.png')
         self.dir = 1
 
     def update(self):
@@ -81,18 +99,20 @@ class Block:
         self.image.draw(self.bx2, self.by2)
 
 def enter():
-    global character, background, attack_ch, block
+    global character, background, attack_ch, block, green_s
     character = Character()
     attack_ch = Attack_Slime()
     background = Background()
+    green_s = Green_Slime()
     block = Block()
     pass
 
 
 def exit():
-    global character, background, attack_ch
+    global character, background, attack_ch, green_s
     del(attack_ch)
     del(character)
+    del(green_s)
     del(block)
     del(background)
     pass
@@ -115,6 +135,8 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             game_framework.change_state(title_state)
         elif event.type == SDL_KEYDOWN and event.key == SDLK_SPACE:
+            check = 4
+        elif event.type == SDL_KEYDOWN and event.type == SDLK_q:
             check = 1
     pass
 
@@ -122,6 +144,7 @@ def update():
     global check
     character.update()
     attack_ch.update()
+    green_s.update()
     block.update()
     background.update()
     pass
@@ -132,9 +155,12 @@ def draw():
     clear_canvas()
     background.draw()
     block.draw()
-    if check == 1:
+    # jump Slime
+    if check == 4:
         attack_ch.draw()
         check = 0
+    elif check == 1:
+        green_s.draw()
     else:
         character.draw()
     update_canvas()
