@@ -10,10 +10,16 @@ import title_state
 name = "MainState"
 
 Back_Width, Back_Height = 1400, 780
-character = None
 background = None
+
+character = None
 green_s = None
 blue_s = None
+
+jp = None
+jg = None
+jb = None
+
 block = None
 font = None
 
@@ -87,11 +93,23 @@ class Blue_Slime:
         self.image.clip_draw(self.frame * 100, 0, 105, 110, self.cx, self.cy)
         delay(0.1)
 
+class Jump_p:
+    def __init__(self):
+        global check, color
+        self.frame = 0
+        self.cx, self.cy = 270, 250
+        self.image = load_image('neum.png')
+        self.dir = 1
+
+    def draw(self):
+        global check, color
+        self.image.draw(self.cx, self.cy)
+
 class Block:
     def __init__(self):
         self.bx, self.by = 1000, 100
         self.bx2, self.by2 = 1600, 370
-        self.image = load_image('bb.png')
+        self.image = load_image('p_block.png')
 
     def update(self):
         self.bx -= 10
@@ -103,20 +121,22 @@ class Block:
         self.image.draw(self.bx2, self.by2)
 
 def enter():
-    global character, background, attack_ch, block, green_s, blue_s
+    global character, background, block, green_s, blue_s, jp, jg, jb
     character = Character()
     background = Background()
     blue_s = Blue_Slime()
     green_s = Green_Slime()
+    jp = Jump_p()
     block = Block()
     pass
 
 
 def exit():
-    global character, background, green_s, blue_s
+    global character, background, green_s, blue_s, jp, jg, jb
     del(character)
     del(green_s)
     del(blue_s)
+    del(jp)
     del(block)
     del(background)
     pass
@@ -138,11 +158,15 @@ def handle_events():
             game_framework.quit()
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
             game_framework.change_state(title_state)
+        # change color
         elif event.type == SDL_KEYDOWN and event.key == SDLK_q:
             if color == 2:
                 color = -1
             color += 1
-
+        # jump character
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_SPACE:
+            check = 1
+            pass
     pass
 
 def update():
@@ -160,6 +184,7 @@ def draw():
     clear_canvas()
     background.draw()
     block.draw()
+    # just running
     if check == 0:
         # pink
         if color == 0:
@@ -170,5 +195,11 @@ def draw():
         # blue
         elif color == 2:
             blue_s.draw()
+    # jump character
+    elif check == 1:
+        # pink
+        if color == 0:
+            jp.draw()
+            check = 0
     update_canvas()
     pass
