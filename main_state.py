@@ -97,13 +97,40 @@ class Jump_p:
     def __init__(self):
         global check, color
         self.frame = 0
-        self.cx, self.cy = 270, 250
+        self.cx, self.cy = 270, 260
         self.image = load_image('neum.png')
         self.dir = 1
 
     def draw(self):
         global check, color
         self.image.draw(self.cx, self.cy)
+        delay(0.1)
+
+class Jump_g:
+    def __init__(self):
+        global check, color
+        self.frame = 0
+        self.cx, self.cy = 270, 260
+        self.image = load_image('neumg.png')
+        self.dir = 1
+
+    def draw(self):
+        global check, color
+        self.image.draw(self.cx, self.cy)
+        delay(0.1)
+
+class Jump_b:
+    def __init__(self):
+        global check, color
+        self.frame = 0
+        self.cx, self.cy = 270, 260
+        self.image = load_image('neumb.png')
+        self.dir = 1
+
+    def draw(self):
+        global check, color
+        self.image.draw(self.cx, self.cy)
+        delay(0.1)
 
 class Block:
     def __init__(self):
@@ -127,6 +154,8 @@ def enter():
     blue_s = Blue_Slime()
     green_s = Green_Slime()
     jp = Jump_p()
+    jg = Jump_g()
+    jb = Jump_b()
     block = Block()
     pass
 
@@ -137,6 +166,8 @@ def exit():
     del(green_s)
     del(blue_s)
     del(jp)
+    del(jg)
+    del(jb)
     del(block)
     del(background)
     pass
@@ -200,6 +231,14 @@ def draw():
         # pink
         if color == 0:
             jp.draw()
+            check = 0
+        # green
+        elif color == 1:
+            jg.draw()
+            check = 0
+        # blue
+        elif color == 2:
+            jb.draw()
             check = 0
     update_canvas()
     pass
