@@ -6,6 +6,7 @@ from pico2d import *
 
 import game_framework
 import title_state
+import class_proportion
 
 name = "MainState"
 
@@ -26,137 +27,18 @@ font = None
 check = 0
 color = 0
 
-class Background:
-    def __init__(self):
-        self.x, self.y = 700, 390
-        self.x1, self.x2 = 2100, 3500
-        self.image = load_image('b1.png')
 
-    def update(self):
-        self.x -= 10
-        self.x1 -= 10
-        self.x2 -= 10
-
-    def draw(self):
-        self.image.draw(self.x, self.y)
-        self.image.draw(self.x1, self.y)
-        self.image.draw(self.x2, self.y)
-
-class Character:
-    def __init__(self):
-        global check, color
-        self.frame = 0
-        self.cx, self.cy = 270, 190
-        self.image = load_image('run_Pink_Slime.png')
-        self.dir = 1
-
-    def update(self):
-        global check, color
-        self.frame = (self.frame + 1) % 4
-
-    def draw(self):
-        global check, color
-        self.image.clip_draw(self.frame * 100, 0, 105, 110, self.cx, self.cy)
-        delay(0.1)
-
-class Green_Slime:
-    def __init__(self):
-        global check, color
-        self.frame = 0
-        self.cx, self.cy = 270, 185
-        self.image = load_image('green.png')
-        self.dir = 1
-
-    def update(self):
-        global check, color
-        self.frame = (self.frame + 1) % 4
-
-    def draw(self):
-        global check, color
-        self.image.clip_draw(self.frame * 100, 0, 105, 110, self.cx, self.cy)
-        delay(0.1)
-
-class Blue_Slime:
-    def __init__(self):
-        global check, color
-        self.frame = 0
-        self.cx, self.cy = 270, 185
-        self.image = load_image('blue.png')
-        self.dir = 1
-
-    def update(self):
-        global check, color
-        self.frame = (self.frame + 1) % 4
-
-    def draw(self):
-        global check, color
-        self.image.clip_draw(self.frame * 100, 0, 105, 110, self.cx, self.cy)
-        delay(0.1)
-
-class Jump_p:
-    def __init__(self):
-        global check, color
-        self.frame = 0
-        self.cx, self.cy = 270, 260
-        self.image = load_image('neum.png')
-        self.dir = 1
-
-    def draw(self):
-        global check, color
-        self.image.draw(self.cx, self.cy)
-        delay(0.1)
-
-class Jump_g:
-    def __init__(self):
-        global check, color
-        self.frame = 0
-        self.cx, self.cy = 270, 260
-        self.image = load_image('neumg.png')
-        self.dir = 1
-
-    def draw(self):
-        global check, color
-        self.image.draw(self.cx, self.cy)
-        delay(0.1)
-
-class Jump_b:
-    def __init__(self):
-        global check, color
-        self.frame = 0
-        self.cx, self.cy = 270, 260
-        self.image = load_image('neumb.png')
-        self.dir = 1
-
-    def draw(self):
-        global check, color
-        self.image.draw(self.cx, self.cy)
-        delay(0.1)
-
-class Block:
-    def __init__(self):
-        self.bx, self.by = 1000, 100
-        self.bx2, self.by2 = 1600, 370
-        self.image = load_image('p_block.png')
-
-    def update(self):
-        self.bx -= 10
-        self.bx2 -= 10
-        pass
-
-    def draw(self):
-        self.image.draw(self.bx, self.by)
-        self.image.draw(self.bx2, self.by2)
 
 def enter():
     global character, background, block, green_s, blue_s, jp, jg, jb
-    character = Character()
-    background = Background()
-    blue_s = Blue_Slime()
-    green_s = Green_Slime()
-    jp = Jump_p()
-    jg = Jump_g()
-    jb = Jump_b()
-    block = Block()
+    character = class_proportion.Character()
+    background = class_proportion.Background()
+    blue_s = class_proportion.Blue_Slime()
+    green_s = class_proportion.Green_Slime()
+    jp = class_proportion.Jump_p()
+    jg = class_proportion.Jump_g()
+    jb = class_proportion.Jump_b()
+    block = class_proportion.Block()
     pass
 
 
