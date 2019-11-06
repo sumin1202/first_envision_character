@@ -69,5 +69,29 @@ class RunState:
         pass
 
 next_state_table = {
-    IdleState: {}
+    IdleState: {SLEEP_TIMER: SleepState}
 }
+
+class SLIME:
+    def __init__(self):
+        self.x, self.y = 270, 190
+        self.image = load_image('run_Pink_Slime.png')
+        self.dir = 1
+        self.frame = 0
+        self.timer = 0
+
+    def update_state(self):
+        pass
+
+    def add_event(self, event):
+        pass
+
+    def update(self):
+        pass
+
+    def draw(self):
+        pass
+
+    def handle_event(self, event):
+        pass
+    
