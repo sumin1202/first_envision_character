@@ -1,7 +1,6 @@
-import game_framework
 import pico2d
 
-import start_state
+from Before import start_state, game_framework
 
 pico2d.open_canvas(1400, 780)
 game_framework.run(start_state)

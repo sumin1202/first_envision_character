@@ -1,19 +1,13 @@
-import random
-import json
-import os
-
 from pico2d import *
 
-import game_framework
-import title_state
-import class_proportion
+from Before import class_proportion, title_state, game_framework
 
 name = "MainState"
 
 Back_Width, Back_Height = 1400, 780
 background = None
 
-character = None
+pink_s = None
 green_s = None
 blue_s = None
 
@@ -24,14 +18,14 @@ jb = None
 block = None
 font = None
 
+next = None
+
 check = 0
 color = 0
 
-
-
 def enter():
-    global character, background, block, green_s, blue_s, jp, jg, jb
-    character = class_proportion.Character()
+    global background, block, pink_s, green_s, blue_s, jp, jg, jb
+    pink_s = class_proportion.Character()
     background = class_proportion.Background()
     blue_s = class_proportion.Blue_Slime()
     green_s = class_proportion.Green_Slime()
@@ -43,8 +37,8 @@ def enter():
 
 
 def exit():
-    global character, background, green_s, blue_s, jp, jg, jb
-    del(character)
+    global pink_s, background, green_s, blue_s, jp, jg, jb
+    del(pink_s)
     del(green_s)
     del(blue_s)
     del(jp)
@@ -84,7 +78,7 @@ def handle_events():
 
 def update():
     global check, color
-    character.update()
+    pink_s.update()
     green_s.update()
     blue_s.update()
     block.update()
@@ -101,7 +95,7 @@ def draw():
     if check == 0:
         # pink
         if color == 0:
-            character.draw()
+            pink_s.draw()
         # green
         elif color == 1:
             green_s.draw()

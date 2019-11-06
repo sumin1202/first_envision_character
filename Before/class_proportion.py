@@ -3,18 +3,20 @@ from pico2d import*
 class Background:
     def __init__(self):
         self.x, self.y = 700, 390
-        self.x1, self.x2 = 2100, 3500
-        self.image = load_image('b4.png')
+        self.x1, self.x2, self.x3 = 2100, 3500, 4900
+        self.image = load_image('b1.png')
 
     def update(self):
         self.x -= 10
         self.x1 -= 10
         self.x2 -= 10
+        self.x3 -= 10
 
     def draw(self):
         self.image.draw(self.x, self.y)
         self.image.draw(self.x1, self.y)
         self.image.draw(self.x2, self.y)
+        self.image.draw(self.x3, self.y)
 
 class Character:
     def __init__(self):
@@ -106,6 +108,15 @@ class Jump_b:
         self.image.draw(self.cx, self.cy)
         delay(0.1)
 
+class nextStage:
+    def __init__(self):
+        self.x, self.y = 700, 300
+        self.image = load_image('next.png')
+
+    def draw(self):
+        self.image.draw(self.x, self.y)
+
+# stage 1
 class Block:
     def __init__(self):
         self.bx, self.by = 1000, 100
