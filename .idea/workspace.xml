@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33b6ecff-af3e-4f3d-89fc-5273fb69a029" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/STAGE1/background.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STAGE1/mygrame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STAGE1/start_state.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STAGE1/character.py" beforeDir="false" afterPath="$PROJECT_DIR$/STAGE1/character.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Before/Mobile - Final Sky Cross Summoner - Pink Slime.png" beforeDir="false" afterPath="$PROJECT_DIR$/resource/Mobile - Final Sky Cross Summoner - Pink Slime.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
