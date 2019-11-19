@@ -1,5 +1,5 @@
 from pico2d import*
-# import game_word
+import game_word
 
 # character Event
 ATTACK_SLIME, JUMP_SLIME, CHANGE_SLIME, SLEEP_TIMER = range(4)

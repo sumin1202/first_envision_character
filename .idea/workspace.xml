@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33b6ecff-af3e-4f3d-89fc-5273fb69a029" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/STAGE1/start_state.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/Mobile - Final Sky Cross Summoner - Pink Slime.png" beforeDir="false" afterPath="$PROJECT_DIR$/resource/Mobile - Final Sky Cross Summoner - Pink Slime.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STAGE1/character.py" beforeDir="false" afterPath="$PROJECT_DIR$/STAGE1/character.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,13 +30,13 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\2DGP\sumin_2DGP_Game\STAGE1" />
-      <recent name="D:\2DGP\sumin_2DGP_Game\Before" />
-      <recent name="D:\2DGP\sumin_2DGP_Game\resource" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\2DGP\sumin_2DGP_Game" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\2DGP\sumin_2DGP_Game\resource" />
+      <recent name="D:\2DGP\sumin_2DGP_Game\STAGE1" />
+      <recent name="D:\2DGP\sumin_2DGP_Game\Before" />
     </key>
   </component>
   <component name="RunDashboard">
