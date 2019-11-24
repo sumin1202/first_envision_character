@@ -1,4 +1,4 @@
-from Before import game_framework
+import game_framework
 from pico2d import *
 
 

@@ -1,4 +1,4 @@
-from Before import game_framework
+import game_framework
 from pico2d import *
 
 
@@ -32,7 +32,7 @@ def handle_events():
 
 def draw():
     clear_canvas()
-    image.draw(400, 300)
+    image.draw(700, 390)
     update_canvas()
 
 
