@@ -1,6 +1,8 @@
 from pico2d import *
 
-from Before import class_proportion, title_state, game_framework
+from Before import class_proportion
+from Before import title_state
+from Before import game_framework
 
 name = "MainState"
 

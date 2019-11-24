@@ -1,4 +1,4 @@
-from Before import game_framework, main_state
+from Before import game_framework
 from pico2d import *
 
 
@@ -16,6 +16,8 @@ def exit():
     del(image)
 
 
+import main_state
+
 def handle_events():
     events = get_events()
     for event in events:
@@ -27,9 +29,10 @@ def handle_events():
             elif (event.type, event.key) == (SDL_KEYDOWN, SDLK_SPACE):
                 game_framework.change_state(main_state)
 
+
 def draw():
     clear_canvas()
-    image.draw(700, 390)
+    image.draw(400, 300)
     update_canvas()
 
 

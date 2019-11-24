@@ -1,3 +1,4 @@
+from Before import game_framework
 from pico2d import *
 
 
@@ -15,9 +16,7 @@ def exit():
     global image
     del(image)
 
-
-from Before import title_state, game_framework
-
+import title_state ##
 
 def update():
     global logo_time
@@ -47,3 +46,7 @@ def pause(): pass
 
 
 def resume(): pass
+
+
+
+
