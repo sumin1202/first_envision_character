@@ -110,6 +110,17 @@ class Jump_b:
         self.image.draw(self.cx, self.cy)
         delay(0.1)
 
+class Color:
+    def __init__(self):
+        self.x, self.y = 120, 720
+        self.image = load_image('color.png')
+
+    def update(self):
+        pass
+
+    def draw(self):
+        self.image.draw(self.x, self.y)
+
 class nextStage:
     def __init__(self):
         self.x, self.y = 700, 300
@@ -121,9 +132,24 @@ class nextStage:
 # stage 1
 class Block:
     def __init__(self):
-        self.bx, self.by = 1000, 100
-        self.bx2, self.by2 = 1600, 370
-        self.image = load_image('p_block.png')
+        self.bx, self.by = 770, 50
+        self.bx2, self.by2 = 1800, 370
+        self.image = load_image('b_block.png')
+
+    def update(self):
+        self.bx -= 10
+        self.bx2 -= 10
+        pass
+
+    def draw(self):
+        self.image.draw(self.bx, self.by)
+        self.image.draw(self.bx2, self.by2)
+
+class GBlock:
+    def __init__(self):
+        self.bx, self.by = 1200, 50
+        self.bx2, self.by2 = 2100, 370
+        self.image = load_image('g_block.png')
 
     def update(self):
         self.bx -= 10
@@ -142,7 +168,7 @@ class DownBlock:
 
     def update(self):
         r1_y = random.randint(5, 8)
-        r2_y = random.randint(10, 12)
+        r2_y = random.randint(3, 5)
         self.bx -= 10
         self.bx2 -= 10
         self.by -= r1_y
@@ -155,7 +181,7 @@ class DownBlock:
 
 class HP:
     def __init__(self):
-        self.x, self.y = 1100, 700
+        self.x, self.y = 1150, 720
         self.image = load_image('hp.png')
 
     def update(self):
