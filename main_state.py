@@ -18,15 +18,17 @@ jg = None
 jb = None
 
 block = None
+downb = None
 font = None
 
 next = None
+hp = None
 
 check = 0
 color = 0
 
 def enter():
-    global background, block, pink_s, green_s, blue_s, jp, jg, jb
+    global background, block, pink_s, green_s, blue_s, jp, jg, jb, downb, hp
     pink_s = class_proportion.Character()
     background = class_proportion.Background()
     blue_s = class_proportion.Blue_Slime()
@@ -35,11 +37,13 @@ def enter():
     jg = class_proportion.Jump_g()
     jb = class_proportion.Jump_b()
     block = class_proportion.Block()
+    downb = class_proportion.DownBlock()
+    hp = class_proportion.HP()
     pass
 
 
 def exit():
-    global pink_s, background, green_s, blue_s, jp, jg, jb
+    global pink_s, background, green_s, blue_s, jp, jg, jb, downb, hp
     del(pink_s)
     del(green_s)
     del(blue_s)
@@ -48,6 +52,8 @@ def exit():
     del(jb)
     del(block)
     del(background)
+    del(downb)
+    del(hp)
     pass
 
 
@@ -85,6 +91,8 @@ def update():
     blue_s.update()
     block.update()
     background.update()
+    downb.update()
+    hp.update()
     pass
 
 
@@ -92,7 +100,9 @@ def draw():
     global check, color
     clear_canvas()
     background.draw()
-    block.draw()
+    #block.draw()
+    downb.draw()
+    hp.draw()
     # just running
     if check == 0:
         # pink

@@ -134,19 +134,32 @@ class Block:
         self.image.draw(self.bx, self.by)
         self.image.draw(self.bx2, self.by2)
 
-class Ball_small:
+class DownBlock:
     def __init__(self):
-        self.bx, self.by = 1000, 100
-        self.bx2, self.by2 = 1600, 370
+        self.bx, self.by = 1000, 700
+        self.bx2, self.by2 = 1600, 800
         self.image = load_image('p_block.png')
 
     def update(self):
-        r1_y = random.randint(7, 15)
-        self.y -= r1_y
+        r1_y = random.randint(5, 8)
+        r2_y = random.randint(10, 12)
+        self.bx -= 10
+        self.bx2 -= 10
+        self.by -= r1_y
+        self.by2 -= r2_y
 
 
     def draw(self):
-        if(self.y<65):
-            self.image.draw(self.x, 65)
-        else:
-            self.image.draw(self.x, self.y)
+        self.image.draw(self.bx, self.by)
+        self.image.draw(self.bx2, self.by2)
+
+class HP:
+    def __init__(self):
+        self.x, self.y = 1100, 700
+        self.image = load_image('hp.png')
+
+    def update(self):
+        pass
+
+    def draw(self):
+        self.image.draw(self.x, self.y)
