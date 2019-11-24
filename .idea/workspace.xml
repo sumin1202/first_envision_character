@@ -3,72 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="33b6ecff-af3e-4f3d-89fc-5273fb69a029" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/.idea/Before.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/.idea/sumin_2DGP_Game.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/character_runs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/class_proportion.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/game_framework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/main_state.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/mygame.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/Blue_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/Green_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/Mobile - Final Sky Cross Summoner - Pink Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/Pink_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/b2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/b3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/b4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/b_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/bb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/g_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/jump_Pink_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/kpu_credit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/neum.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/neumb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/neumg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/p_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/run_Pink_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/title.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/vv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/resource/walk_Pink_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/start_state.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Before/title_state.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/Blue_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/Green_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/Mobile - Final Sky Cross Summoner - Pink Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/Pink_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/b1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/b2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/b3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/b4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/b_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/bb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/g_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/jump_Pink_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/kpu_credit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/neum.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/neumb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/neumg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/p_block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/run_Pink_Slime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/title.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/vv.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/walk_Pink_Slime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/class_proportion.py" beforeDir="false" afterPath="$PROJECT_DIR$/class_proportion.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,27 +52,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.mygame (2)">
-    <configuration name="character_runs" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sumin_2DGP_Game" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="D:\2DGP\sumin_2DGP_Game\Before\character_runs.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main_state" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="sumin_2DGP_Game" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -222,13 +136,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="title_state" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="sumin_2DGP_Game" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/title_state.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.mygame (2)" />
+        <item itemvalue="Python.title_state" />
         <item itemvalue="Python.mygame (1)" />
         <item itemvalue="Python.mygame" />
         <item itemvalue="Python.main_state" />
-        <item itemvalue="Python.character_runs" />
       </list>
     </recent_temporary>
   </component>

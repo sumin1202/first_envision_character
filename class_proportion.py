@@ -1,4 +1,5 @@
 from pico2d import*
+import random
 
 class Background:
     def __init__(self):
@@ -13,6 +14,7 @@ class Background:
         self.x3 -= 10
 
     def draw(self):
+
         self.image.draw(self.x, self.y)
         self.image.draw(self.x1, self.y)
         self.image.draw(self.x2, self.y)
@@ -131,3 +133,20 @@ class Block:
     def draw(self):
         self.image.draw(self.bx, self.by)
         self.image.draw(self.bx2, self.by2)
+
+class Ball_small:
+    def __init__(self):
+        self.bx, self.by = 1000, 100
+        self.bx2, self.by2 = 1600, 370
+        self.image = load_image('p_block.png')
+
+    def update(self):
+        r1_y = random.randint(7, 15)
+        self.y -= r1_y
+
+
+    def draw(self):
+        if(self.y<65):
+            self.image.draw(self.x, 65)
+        else:
+            self.image.draw(self.x, self.y)
