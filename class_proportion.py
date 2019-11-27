@@ -178,6 +178,7 @@ class GBlock:
         self.image.draw(self.bx3, self.by)
         self.image.draw(self.bx4, self.by4)
 
+# 이거 나중에 정리해야함
 class DownBlock:
     def __init__(self):
         self.bx, self.by = 1000, 700
