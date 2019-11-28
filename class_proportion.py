@@ -142,6 +142,8 @@ class Block:
         self.bx, self.by = 770, 0
         self.bx2, self.bx3 = 1800, 3400
         self.image = load_image('b_block.png')
+        self.image2 = load_image('p_block.png')
+        self.image3 = load_image('b_blcok.png')
 
     def update(self):
         self.bx -= 10
