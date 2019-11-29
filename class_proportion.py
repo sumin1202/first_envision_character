@@ -139,6 +139,7 @@ class nextStage:
 # stage 1
 class Block:
     def __init__(self):
+        self.by0 = 0    # 안움직이는 블럭 y값 고정
         self.bx, self.by = 770, 0
         self.bx2, self.bx3 = 1800, 3400
         self.image = load_image('b_block.png')
