@@ -9,6 +9,7 @@ name = "MainState"
 Back_Width, Back_Height = 1400, 780
 background = None
 
+# slime
 pink_s = None
 green_s = None
 blue_s = None
@@ -17,6 +18,7 @@ jp = None
 jg = None
 jb = None
 
+# block
 block = None
 downb = None
 gdownb = None
