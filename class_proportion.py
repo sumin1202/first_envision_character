@@ -1,6 +1,7 @@
 from pico2d import*
 import random
 
+# gmae world로 변환하기
 class Background:
     def __init__(self):
         self.x, self.y = 700, 390
