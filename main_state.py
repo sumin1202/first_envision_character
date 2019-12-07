@@ -28,6 +28,7 @@ next = None
 hp = None
 color_ch = None
 
+# next stage
 check = 0
 color = 0
 
