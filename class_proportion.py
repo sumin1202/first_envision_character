@@ -137,7 +137,7 @@ class nextStage:
     def draw(self):
         self.image.draw(self.x, self.y)
 
-# stage 1
+# stage 1 not move
 class Block:
     def __init__(self):
         self.by0 = 0    # 안움직이는 블럭 y값 고정
@@ -158,6 +158,7 @@ class Block:
         self.image.draw(self.bx2, self.by)
         self.image.draw(self.bx3, self.by)
 
+# moving blcoks
 class GBlock:
     def __init__(self):
         self.bx, self.by = 1300, 0
