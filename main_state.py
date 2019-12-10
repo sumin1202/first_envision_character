@@ -1,69 +1,78 @@
-from pico2d import *
+import random
+import json
+import os
 
-import class_proportion
-import title_state
+from pico2d import *
 import game_framework
+import game_world
+
+from slime import Slime
+from grass import Grass
+from fallingblock import BLOCK, G_BLOCK, B_BLOCK
+
+from background import FixedBackground as Background
 
 name = "MainState"
 
-Back_Width, Back_Height = 1400, 780
-background = None
+slime = None
+grass = None
+blocks = None
+g_blocks = None
+b_blocks = None
 
-# slime
-pink_s = None
-green_s = None
-blue_s = None
+check = ((1030, 700), (1600, 900), (2100, 1200), (2600, 1400), (3200, 1800), (3500, 1900),
+         (4100, 2100))
+check2 = ((750, -10), (1800, -10), (2750, -10), (3400, -10), (4100, -10))
+check3 = ((1300, -10), (2100, -10), (2350, -10), (3100, -10), (3800, -10))
 
-jp = None
-jg = None
-jb = None
+def collide(a, b):
+    # fill here
+    left_a, bottom_a, right_a, top_a = a.get_bb()
+    left_b, bottom_b, right_b, top_b = b.get_bb()
 
-# block
-block = None
-downb = None
-gdownb = None
-font = None
+    if left_a > right_b: return False
+    if right_a < left_b: return False
+    if top_a < bottom_b: return False
+    if bottom_a > top_b: return False
 
-next = None
-hp = None
-color_ch = None
+    return True
 
-# next stage
-check = 0
-color = 0
 
 def enter():
-    global background, block, pink_s, green_s, blue_s, jp, jg, jb, downb, hp, gdownb, color_ch
-    pink_s = class_proportion.Character()
-    background = class_proportion.Background()
-    blue_s = class_proportion.Blue_Slime()
-    green_s = class_proportion.Green_Slime()
-    jp = class_proportion.Jump_p()
-    jg = class_proportion.Jump_g()
-    jb = class_proportion.Jump_b()
-    block = class_proportion.Block()
-    downb = class_proportion.DownBlock()
-    gdownb = class_proportion.GBlock()
-    hp = class_proportion.HP()
-    color_ch=class_proportion.Color()
-    pass
+    global slime
+    slime = Slime()
+    game_world.add_object(slime, 1)
+
+    global grass
+    grass = Grass()
+    game_world.add_object(grass, 0)
+
+    # fill here for balls
+    global blocks
+    blocks = [BLOCK() for i in range(100)]
+    for i in range(7):
+        blocks[i].pos(check[i])
+    game_world.add_objects(blocks, 1)
+
+    global g_blocks
+    g_blocks = [G_BLOCK() for i in range(100)]
+    for i in range(5):
+        g_blocks[i].pos(check2[i])
+    game_world.add_objects(g_blocks, 1)
+
+    global b_blocks
+    b_blocks = [B_BLOCK() for i in range(100)]
+    for i in range(5):
+        b_blocks[i].pos(check3[i])
+    game_world.add_objects(b_blocks, 1)
+
+    global background
+    background = Background()
+    game_world.add_object(background, 0)
 
 
 def exit():
-    global pink_s, background, green_s, blue_s, jp, jg, jb, downb, hp, gdownb, color_ch
-    del(pink_s)
-    del(green_s)
-    del(blue_s)
-    del(jp)
-    del(jg)
-    del(jb)
-    del(block)
-    del(background)
-    del(downb)
-    del(hp)
-    del(gdownb)
-    del(color_ch)
-    pass
+    game_world.clear()
 
 
 def pause():
@@ -75,71 +84,38 @@ def resume():
 
 
 def handle_events():
-    global check, color
     events = get_events()
     for event in events:
         if event.type == SDL_QUIT:
             game_framework.quit()
         elif event.type == SDL_KEYDOWN and event.key == SDLK_ESCAPE:
-            game_framework.change_state(title_state)
-        # change color
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_q:
-            if color == 2:
-                color = -1
-            color += 1
-        # jump character
-        elif event.type == SDL_KEYDOWN and event.key == SDLK_SPACE:
-            check = 1
-            pass
-    pass
+            game_framework.quit()
+        else:
+            slime.handle_event(event)
+
 
 def update():
-    global check, color
-    pink_s.update()
-    green_s.update()
-    blue_s.update()
-    block.update()
-    background.update()
-    downb.update()
-    gdownb.update()
-    hp.update()
-    color_ch.update()
-    pass
+    for game_object in game_world.all_objects():
+        game_object.update()
+
+    # collision check 슬라임 색깔과 블럭색깔
+    global slime
+    for ball in blocks:
+        if collide(slime, ball):
+            #if slime.color
+            blocks.remove(ball)
+            game_world.remove_object(ball)
+
+    # for ball in blocks:
+    # if collide(grass, ball):
+    # ball.stop()
+
+    if collide(grass, slime):
+        slime.y = 180
 
 
 def draw():
-    global check, color
     clear_canvas()
-    background.draw()
-    block.draw()
-    downb.draw()
-    gdownb.draw()
-    color_ch.draw()
-    hp.draw()
-    # just running
-    if check == 0:
-        # pink
-        if color == 0:
-            pink_s.draw()
-        # green
-        elif color == 1:
-            green_s.draw()
-        # blue
-        elif color == 2:
-            blue_s.draw()
-    # jump character
-    elif check == 1:
-        # pink
-        if color == 0:
-            jp.draw()
-            check = 0
-        # green
-        elif color == 1:
-            jg.draw()
-            check = 0
-        # blue
-        elif color == 2:
-            jb.draw()
-            check = 0
+    for game_object in game_world.all_objects():
+        game_object.draw()
     update_canvas()
-    pass

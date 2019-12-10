@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33b6ecff-af3e-4f3d-89fc-5273fb69a029" name="Default Changelist" comment="" />
+    <list default="true" id="9bf857c0-7336-420d-912b-100a36737326" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/b2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/b4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/block.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/character_runs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/class_proportion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_framework.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_framework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mygame.py" beforeDir="false" afterPath="$PROJECT_DIR$/mygame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neumb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/neumg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/title_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/title_state.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vv.png" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,23 +37,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1RhLuN2NAI2PzICfXyoI9Th9x4t" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectId" id="1TaH3XIDxu6BbQXUeLbbZqo3fJw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\2DGP\sumin_2DGP_Game" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\2DGP\sumin_2DGP_Game\resource" />
-      <recent name="D:\2DGP\sumin_2DGP_Game\STAGE1" />
-      <recent name="D:\2DGP\sumin_2DGP_Game\Before" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -48,9 +56,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mygame (2)">
-    <configuration name="class_proportion" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sumin_2DGP_Game" />
+  <component name="RunManager" selected="Python.mygame">
+    <configuration name="game_world" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Lecture14_Collision" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -61,7 +69,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/class_proportion.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/game_world.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -70,50 +78,8 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main_state (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sumin_2DGP_Game" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_state.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mygame (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sumin_2DGP_Game" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Before" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Before/mygame.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mygame (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sumin_2DGP_Game" />
+    <configuration name="mygame" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Lecture14_Collision" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -133,34 +99,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="title_state" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="sumin_2DGP_Game" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/title_state.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.mygame (2)" />
-        <item itemvalue="Python.class_proportion" />
-        <item itemvalue="Python.main_state (1)" />
-        <item itemvalue="Python.title_state" />
-        <item itemvalue="Python.mygame (1)" />
+        <item itemvalue="Python.mygame" />
+        <item itemvalue="Python.game_world" />
       </list>
     </recent_temporary>
   </component>
@@ -169,11 +111,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="33b6ecff-af3e-4f3d-89fc-5273fb69a029" name="Default Changelist" comment="" />
-      <created>1570114602626</created>
+      <changelist id="9bf857c0-7336-420d-912b-100a36737326" name="Default Changelist" comment="" />
+      <created>1573691087608</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570114602626</updated>
+      <updated>1573691087608</updated>
     </task>
     <servers />
   </component>

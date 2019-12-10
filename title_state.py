@@ -10,7 +10,6 @@ def enter():
     global image
     image = load_image('title.png')
 
-
 def exit():
     global image
     del(image)
@@ -32,7 +31,7 @@ def handle_events():
 
 def draw():
     clear_canvas()
-    image.draw(700, 390)
+    image.draw(700, 310)
     update_canvas()
 
 
