@@ -46,6 +46,7 @@ class BLOCK:
 
         BLOCK.image = load_image('p_block.png')
 
+
         self.x, self.y = -100, 0
         self.fall_speed = random.randint(BLOCK.MIN_FALL_SPEED, BLOCK.MAX_FALL_SPEED)
 
@@ -72,7 +73,7 @@ class BLOCK:
             self.image2.draw(self.x, self.y)
 
         # fill here for draw
-        draw_rectangle(*self.get_bb())
+       # draw_rectangle(*self.get_bb())
 
 class G_BLOCK:
     image = None
@@ -103,7 +104,7 @@ class G_BLOCK:
         if self.b_color == 1:
             self.image.draw(self.x, self.y)
         # fill here for draw
-        draw_rectangle(*self.get_bb())
+        #draw_rectangle(*self.get_bb())
 
 class B_BLOCK:
     image = None
@@ -134,4 +135,4 @@ class B_BLOCK:
         if self.b_color == 2:
             self.image.draw(self.x, self.y)
         # fill here for draw
-        draw_rectangle(*self.get_bb())
+       # draw_rectangle(*self.get_bb())

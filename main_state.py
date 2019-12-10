@@ -109,18 +109,18 @@ def update():
                 game_framework.change_state(title_state)
 
     for b2 in g_blocks:
-      if collide(slime, b2):
-        if slime.checkColor == b2.b_color:
-            pass
-        else:
-            game_framework.change_state(title_state)
+        if collide(slime, b2):
+            if slime.checkColor == b2.b_color:
+                pass
+            else:
+                game_framework.change_state(title_state)
 
     for b3 in g_blocks:
-      if collide(slime, b3):
-        if slime.checkColor == b3.b_color:
-            pass
-        else:
-            game_framework.change_state(title_state)
+        if collide(slime, b3):
+            if slime.checkColor == b3.b_color:
+                pass
+            else:
+                game_framework.change_state(title_state)
 
 
     # for ball in blocks:
