@@ -47,14 +47,12 @@ class IdleState:
 
     @staticmethod
     def exit(boy, event):
-        global color
         if event == SPACE and boy.is_jump == False:
             boy.jump()
         pass
 
     @staticmethod
     def do(boy):
-        global color
         boy.frame = (boy.frame + 1) % 4
         boy.timer -= 1
         if boy.timer == 0:
@@ -67,11 +65,11 @@ class IdleState:
             boy.image.clip_draw(int(boy.frame) * 100, 100, 100, 100, boy.x, boy.y)
             delay(0.1)
         else:
-            if color == 0:
+            if boy.checkColor == 0:
                 boy.image.clip_draw(int(boy.frame) * 100, 0, 100, 100, boy.x, boy.y)
-            elif color == 1:
+            elif boy.checkColor == 1:
                 boy.image2.clip_draw(int(boy.frame) * 100, 0, 100, 100, boy.x, boy.y)
-            elif color == 2:
+            elif boy.checkColor == 2:
                 boy.image3.clip_draw(int(boy.frame) * 100, 0, 100, 100, boy.x, boy.y)
             delay(0.08)
 
@@ -104,6 +102,8 @@ class Slime:
         self.color = 0
         self.v = 0
 
+        self.checkColor = 0
+
     def handle_event(self, event):
         global color
         if (event.type, event.key) in key_event_table:
@@ -111,9 +111,9 @@ class Slime:
             self.add_event(key_event)
             # change color
         elif event.type == SDL_KEYDOWN and event.key == SDLK_q:
-            if color == 2:
-                color = -1
-            color += 1
+            if self.checkColor == 2:
+                self.checkColor = -1
+            self.checkColor += 1
 
     def get_bb(self):
         # fill here

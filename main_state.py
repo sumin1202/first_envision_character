@@ -21,7 +21,7 @@ g_blocks = None
 b_blocks = None
 
 check = ((1030, 700), (1600, 900), (2100, 1200), (2600, 1400), (3200, 1800), (3500, 1900),
-         (4100, 2100))
+         (4100, 2100), (4300, 2300))
 check2 = ((750, -10), (1800, -10), (2750, -10), (3400, -10), (4100, -10))
 check3 = ((1300, -10), (2100, -10), (2350, -10), (3100, -10), (3800, -10))
 
@@ -49,7 +49,7 @@ def enter():
 
     global blocks
     blocks = [BLOCK() for i in range(100)]
-    for i in range(7):
+    for i in range(8):
         blocks[i].pos(check[i])
     game_world.add_objects(blocks, 1)
 
@@ -101,13 +101,26 @@ def update():
     global blocks, g_blocks, b_blocks, slime
     for b1 in blocks:
         if collide(slime, b1):
-            print(slime.color, b1.b_color)
-            if slime.color == b1.b_color:
+            print(slime.checkColor, b1.b_color)
+            if slime.checkColor == b1.b_color:
                 blocks.remove(b1)
                 game_world.remove_object(b1)
-            elif slime.color != b1.b_color:
+            elif slime.checkColor != b1.b_color:
                 game_framework.change_state(title_state)
 
+    for b2 in g_blocks:
+      if collide(slime, b2):
+        if slime.checkColor == b2.b_color:
+            pass
+        else:
+            game_framework.change_state(title_state)
+
+    for b3 in g_blocks:
+      if collide(slime, b3):
+        if slime.checkColor == b3.b_color:
+            pass
+        else:
+            game_framework.change_state(title_state)
 
 
     # for ball in blocks:
