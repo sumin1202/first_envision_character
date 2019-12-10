@@ -41,13 +41,13 @@ class BLOCK:
     MAX_FALL_SPEED = 5
 
     image = None
-
+    b_color = 0
     def __init__(self):
         global b_color
+
         BLOCK.image = load_image('p_block.png')
 
         self.x, self.y = -100, 0
-        self.b_color = 0
         self.fall_speed = random.randint(BLOCK.MIN_FALL_SPEED, BLOCK.MAX_FALL_SPEED)
 
     def update(self):
@@ -61,29 +61,29 @@ class BLOCK:
         self.x = check[0]
         self.y = check[1]
 
-    def color_check(self, slime, block):
-        if slime.color == 0:
-            pass
-
     def get_bb(self):
         global b_color
         return self.x - 70, self.y - 160, self.x + 70, self.y + 150
 
     def draw(self):
         global b_color
-        self.image.draw(self.x, self.y)
+        if self.b_color == 0:
+            self.image.draw(self.x, self.y)
+        else:
+            self.image2.draw(self.x, self.y)
+
         # fill here for draw
         draw_rectangle(*self.get_bb())
 
 class G_BLOCK:
     image = None
+    b_color = 1
 
     def __init__(self):
         global b_color
         G_BLOCK.image = load_image('g_block.png')
 
         self.x, self.y = -100, 0
-        self.b_color = 1
 
     def update(self):
         global b_color
@@ -95,29 +95,26 @@ class G_BLOCK:
         self.x = check[0]
         self.y = check[1]
 
-    def color_check(self, slime, block):
-        if slime.color == 0:
-            pass
-
     def get_bb(self):
         global cnt
         return self.x - 70, self.y - 160, self.x + 70, self.y + 150
 
     def draw(self):
         global cnt
-        self.image.draw(self.x, self.y)
+        if self.b_color == 1:
+            self.image.draw(self.x, self.y)
         # fill here for draw
         draw_rectangle(*self.get_bb())
 
 class B_BLOCK:
     image = None
+    b_color = 2
 
     def __init__(self):
         global b_color
         B_BLOCK.image = load_image('b_block.png')
 
         self.x, self.y = -100, 0
-        self.b_color = 2
 
     def update(self):
         global b_color
@@ -129,16 +126,13 @@ class B_BLOCK:
         self.x = check[0]
         self.y = check[1]
 
-    def color_check(self, slime, block):
-        if slime.color == 0:
-            pass
-
     def get_bb(self):
         global cnt
         return self.x - 70, self.y - 160, self.x + 70, self.y + 150
 
     def draw(self):
         global cnt
-        self.image.draw(self.x, self.y)
+        if self.b_color == 2:
+            self.image.draw(self.x, self.y)
         # fill here for draw
         draw_rectangle(*self.get_bb())

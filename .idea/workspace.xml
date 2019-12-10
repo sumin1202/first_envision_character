@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bf857c0-7336-420d-912b-100a36737326" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/b2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/block.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/character_runs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/class_proportion.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_framework.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_framework.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/background.py" beforeDir="false" afterPath="$PROJECT_DIR$/background.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fallingblock.py" beforeDir="false" afterPath="$PROJECT_DIR$/fallingblock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mygame.py" beforeDir="false" afterPath="$PROJECT_DIR$/mygame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neum.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neumb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/neumg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/title_state.py" beforeDir="false" afterPath="$PROJECT_DIR$/title_state.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/slime.py" beforeDir="false" afterPath="$PROJECT_DIR$/slime.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

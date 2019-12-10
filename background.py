@@ -28,7 +28,7 @@ class FixedBackground:
     def update(self):
         num = 10
         if self.x3 < 700:
-            game_framework.run(title_state)
+            game_framework.change_state(title_state)
         self.x -= num
         self.x1 -= num
         self.x2 -= num
