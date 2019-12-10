@@ -7,19 +7,14 @@ import game_framework
 import title_state
 import game_world
 
-from slime import Slime, G_Slime, B_Slime
+from slime import Slime
 from grass import Grass
 from fallingblock import BLOCK, G_BLOCK, B_BLOCK
 
 from background import FixedBackground as Background
-
 name = "MainState"
 
 slime = None
-s2 = None
-s3 = None
-g_slime = None
-b_slime = None
 grass = None
 blocks = None
 g_blocks = None
@@ -44,17 +39,14 @@ def collide(a, b):
 
 
 def enter():
-    global slime, s2, s3
+    global slime
     slime = Slime()
-    s2 = G_Slime()
-    s3 = B_Slime()
     game_world.add_object(slime, 1)
 
     global grass
     grass = Grass()
     game_world.add_object(grass, 0)
 
-    # fill here for balls
     global blocks
     blocks = [BLOCK() for i in range(100)]
     for i in range(7):
@@ -106,7 +98,7 @@ def update():
         game_object.update()
 
     # collision check 슬라임 색깔과 블럭색깔
-    global slime, blocks, g_blocks, b_blocks
+    global blocks, g_blocks, b_blocks, slime
     for b1 in blocks:
         if collide(slime, b1):
             print(slime.color, b1.b_color)
@@ -116,20 +108,7 @@ def update():
             elif slime.color != b1.b_color:
                 game_framework.change_state(title_state)
 
-    for b2 in g_blocks:
-       if collide(slime, b2):
-           print(slime.color, b2.b_color)
-           if slime.color == b2.b_color:
-                pass
-           else:
-                game_framework.change_state(title_state)
 
-   # for b3 in b_blocks:
-      #  if collide(slime, b3):
-      #      if slime.color == b3.b_color:
-      #          pass
-        #    else:
-         #       game_framework.change_state(title_state)
 
     # for ball in blocks:
     # if collide(grass, ball):

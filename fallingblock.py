@@ -3,7 +3,6 @@ from pico2d import *
 import game_world
 import game_framework
 
-cnt = 0
 b_color = 0
 
 class FallingBlock:
